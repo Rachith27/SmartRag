@@ -1,0 +1,41 @@
+# Core Application & UI
+streamlit>=1.38.0
+python-dotenv>=1.0.1
+pydantic>=2.9.0
+
+# LangChain Core & Community
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# LLM Providers
+langchain-openai>=0.2.0
+langchain-google-genai>=2.0.0
+openai>=1.45.0
+google-generativeai>=0.8.2
+
+# Embeddings & Transformers
+langchain-huggingface>=0.1.0
+sentence-transformers>=3.0.0
+torch>=2.2.0
+
+# Vector Databases
+faiss-cpu>=1.8.0
+chromadb>=0.5.5
+
+# Document Loaders & Parsing
+pypdf>=4.3.1
+beautifulsoup4>=4.12.3
+markdown>=3.6
+unstructured>=0.15.0
+
+# Evaluation & Metrics
+ragas>=0.1.20
+datasets>=2.20.0
+
+# Utilities
+numpy>=1.26.0
+pandas>=2.2.0
+requests>=2.32.0
+tqdm>=4.66.0

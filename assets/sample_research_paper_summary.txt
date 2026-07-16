@@ -1,0 +1,16 @@
+Research Summary: Quantum-Enhanced Retrieval-Augmented Generation (Q-RAG)
+Authors: Dr. Elena Rostova, Marcus Chen, and Dr. Kenji Sato
+Published: Journal of Advanced Agentic Systems, Volume 18, Issue 4 (June 2025)
+
+ABSTRACT:
+Traditional Retrieval-Augmented Generation (RAG) pipelines rely on classical dense vector search (such as FAISS or ChromaDB using cosine similarity over 384-dimensional or 1536-dimensional embeddings). While effective, classical approximate nearest neighbor (ANN) algorithms suffer from accuracy degradation when scaling beyond 10 million context chunks due to high-dimensional index crowding and semantic drift.
+
+In this research paper, we introduce Q-RAG (Quantum-Enhanced Retrieval-Augmented Generation), a hybrid architecture that leverages Quantum Annealing processors to perform exact multi-document subgraph matching in logarithmic time O(log N).
+
+KEY FINDINGS & METRICS:
+1. Retrieval Latency Reduction: Q-RAG achieved a 42% reduction in end-to-end P99 latency compared to classical HNSW (Hierarchical Navigable Small World) indices on datasets exceeding 50 million tokens.
+2. Context Precision Improvement: On the RAGAS evaluation benchmark, Q-RAG boosted Context Precision from 0.81 (classical baseline) to 0.96 by utilizing quantum entanglement states to resolve pronoun ambiguity across non-contiguous document chunks.
+3. Hardware Requirements: Running Q-RAG requires access to at least a 128-qubit superconducting quantum processing unit (QPU) operating at 15 millikelvin (-273.13 Celsius), connected via cryogenic optical links.
+
+LIMITATIONS:
+Currently, Q-RAG is not viable for mobile or consumer devices due to cryogenic cooling constraints. Our team is actively developing room-temperature photonic quantum accelerators projected for alpha release in late 2028.

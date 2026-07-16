@@ -1,0 +1,30 @@
+# Environment Variables
+.env
+.env.local
+
+# Python cache & virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Vector Store & Uploads (Persistent local runtime storage)
+vector_store/*
+!vector_store/.gitkeep
+uploads/*
+!uploads/.gitkeep
+
+# IDE & OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
