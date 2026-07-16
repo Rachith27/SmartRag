@@ -71,6 +71,9 @@ class LLMFactory:
                 
             elif target_provider == "gemini":
                 from langchain_google_genai import ChatGoogleGenerativeAI
+                # Remap deprecated 'gemini-1.5-pro' string if passed from old session/config
+                if target_model == "gemini-1.5-pro":
+                    target_model = "gemini-1.5-pro-latest"
                 # Set environment variable temporarily if needed by Google client internals
                 os.environ["GOOGLE_API_KEY"] = resolved_api_key
                 return ChatGoogleGenerativeAI(

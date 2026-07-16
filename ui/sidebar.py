@@ -43,7 +43,7 @@ def render_sidebar() -> Dict[str, Any]:
         if selected_provider == "openai":
             model_options = ["gpt-4o-mini", "gpt-4o"]
         elif selected_provider == "gemini":
-            model_options = ["gemini-1.5-pro", "gemini-1.5-flash"]
+            model_options = ["gemini-1.5-pro-latest", "gemini-1.5-flash", "gemini-2.0-flash"]
         elif selected_provider == "openrouter":
             model_options = ["openai/gpt-4o-mini", "anthropic/claude-3.5-sonnet"]
         else:

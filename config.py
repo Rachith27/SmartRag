@@ -62,7 +62,7 @@ class LLMProviderConfig:
     """Supported LLM providers and their default models."""
     
     OPENAI_DEFAULT_MODEL: str = "gpt-4o-mini"
-    GEMINI_DEFAULT_MODEL: str = "gemini-1.5-pro"
+    GEMINI_DEFAULT_MODEL: str = "gemini-1.5-pro-latest"
     OPENROUTER_DEFAULT_MODEL: str = "openai/gpt-4o-mini"
     
     @classmethod
