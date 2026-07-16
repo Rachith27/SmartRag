@@ -71,9 +71,10 @@ class LLMFactory:
                 
             elif target_provider == "gemini":
                 from langchain_google_genai import ChatGoogleGenerativeAI
-                # Remap deprecated 'gemini-1.5-pro' string if passed from old session/config
-                if target_model == "gemini-1.5-pro":
-                    target_model = "gemini-1.5-pro-latest"
+                # Remap deprecated 'gemini-1.5-*' strings to active 'gemini-2.5-flash'
+                if "1.5" in target_model:
+                    logger.warning(f"Deprecated model '{target_model}' requested. Auto-upgrading to 'gemini-2.5-flash'.")
+                    target_model = "gemini-2.5-flash"
                 # Set environment variable temporarily if needed by Google client internals
                 os.environ["GOOGLE_API_KEY"] = resolved_api_key
                 return ChatGoogleGenerativeAI(
