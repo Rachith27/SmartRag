@@ -22,25 +22,25 @@ Every response is accompanied by **expandable source citations** detailing the e
 ```mermaid
 graph TD
     subgraph Ingestion ["📥 Ingestion & Preprocessing Pipeline"]
-        A[User Documents: PDF / TXT / MD / Web URL] --> B[Specialized Loaders: PyPDF / Text / WebBase]
-        B --> C[RecursiveCharacterTextSplitter <br/> Size: 800 | Overlap: 150]
-        C --> D[Embeddings: all-MiniLM-L6-v2 <br/> HuggingFace Singleton Cache]
-        D --> E[(Persistent Vector Store <br/> FAISS / ChromaDB)]
+        A["User Documents: PDF, TXT, MD, Web URL"] --> B["Specialized Loaders: PyPDF, Text, WebBase"]
+        B --> C["RecursiveCharacterTextSplitter<br/>Size: 800 - Overlap: 150"]
+        C --> D["Embeddings: all-MiniLM-L6-v2<br/>HuggingFace Singleton Cache"]
+        D --> E[("Persistent Vector Store<br/>FAISS or ChromaDB")]
     end
 
     subgraph Retrieval ["🔍 Semantic Retrieval & Grounding"]
-        F[Natural Language Question] --> G[Question Embedding]
-        G --> H[Similarity Search <br/> Top K = 4]
+        F["Natural Language Question"] --> G["Question Embedding"]
+        G --> H["Similarity Search<br/>Top K = 4"]
         E --> H
-        H --> I[Enriched Context Chunks <br/> + Normalized Scores]
-        I --> J[Strict Anti-Hallucination Prompt <br/> + Multi-Turn Chat History]
-        J --> K[Dynamic LLM Factory <br/> OpenAI / Gemini / OpenRouter]
-        K --> L[Grounded Answer]
+        H --> I["Enriched Context Chunks<br/>Normalized Scores Attached"]
+        I --> J["Strict Anti-Hallucination Prompt<br/>Multi-Turn Chat History"]
+        J --> K["Dynamic LLM Factory<br/>OpenAI, Gemini, OpenRouter"]
+        K --> L["Grounded Answer"]
     end
 
     subgraph Observability ["📊 Evaluation & Streamlit UI"]
-        L & F & I --> M[RAGAS Evaluation Suite <br/> Faithfulness | Relevancy | Precision | Recall]
-        M --> N[Streamlit UI <br/> Live Progress Bars & Source Cards]
+        L & F & I --> M["RAGAS Evaluation Suite<br/>Faithfulness, Relevancy, Precision, Recall"]
+        M --> N["Streamlit UI<br/>Live Progress Bars and Source Cards"]
         L --> N
     end
 ```
