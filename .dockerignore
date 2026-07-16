@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.env.*
+!.env.example
+venv/
+env/
+.venv/
+.git/
+.gitignore
+README.md
+assets/screenshot_*
+vector_store/*
+!vector_store/.gitkeep
+uploads/*
+!uploads/.gitkeep
