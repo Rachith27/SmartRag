@@ -2,6 +2,15 @@
 
 <div align="center">
   <p><strong>A modular, non-hallucinating Retrieval-Augmented Generation (RAG) application built with Python 3.12+, Streamlit, LangChain, FAISS/ChromaDB, and RAGAS.</strong></p>
+  <h3>🚀 Live Demo</h3>
+
+**🌐 https://smartrag-wpgkkczwcx8ov9zpnjyl9s.streamlit.app/**
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=streamlit)](https://smartrag-wpgkkczwcx8ov9zpnjyl9s.streamlit.app/)
+
+<p><strong>A modular, non-hallucinating Retrieval-Augmented Generation (RAG) application built with Python 3.12+, Streamlit, LangChain, FAISS/ChromaDB, and RAGAS.</strong></p>
+
+</div>
 </div>
 
 ---
